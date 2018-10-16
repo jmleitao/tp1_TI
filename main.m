@@ -14,7 +14,7 @@ end
 
 
 
-%EXERCISE 2
+%EXERCISE 3
 flag2 = 10; %1-'guitar.wav' 2-'homerBin.bmp' 3-'english.txt'
 if flag2 == 1
     y = hist_audio('guitarSolo.wav'); 
@@ -73,7 +73,19 @@ elseif flag5 == 2
     nbits = 256;
     
     groupingsymbols(y,nbits)
+    
 elseif flag5 == 3
+    y = imread('homerBin.bmp');
+    nbits = 256;
+    
+    groupingsymbols(y,nbits)
+elseif flag5 == 4
+    y = imread('homer.bmp');
+    nbits = 256;
+    
+    groupingsymbols(y,nbits)
+    
+elseif flag5 == 5
     
     file = fopen('english.txt');
     y = fscanf(file,'%c');
@@ -127,7 +139,7 @@ elseif flag6 == 2
         plot(1:length(vectors),vectors)
         title(sprintf('%s',file));
         xlabel('Janelas');
-        ylabel('Informação Mútua');
+        ylabel('InformaÃ§Ã£o MÃºtua');
 
         
 % Exercise 6 c)
@@ -159,7 +171,7 @@ elseif flag6 == 3
     scatter(1,0.37777);
     title(sprintf('%s',file));
     xlabel('Janelas');
-    ylabel('Informação Mútua');
+    ylabel('InformaÃ§Ã£o MÃºtua');
     
     Max = max(vectors);
     MaxVector(i) = Max;
