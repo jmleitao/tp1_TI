@@ -12,3 +12,4 @@ bar(alfa,a,'histc')
 title('Histogram');
 xlabel('Alfabet');
 ylabel('Occurrences');
+
